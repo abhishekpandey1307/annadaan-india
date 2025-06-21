@@ -46,7 +46,7 @@ Annadaan is a platform that:
 | Frontend              | Backend                  | Services          |
 |-----------------------|---------------------------|-------------------|
 | HTML5, CSS3, JavaScript | Firebase Auth, Firestore | EmailJS           |
-| Responsive Design      | IP-based NGO Filtering    | Netlify Deployment |
+| Responsive Design      | Location-based NGO Filtering    | Netlify Deployment |
 
 ---
 
@@ -75,7 +75,7 @@ Annadaan is a platform that:
 **Abhishek Pandey**  
 🎓 B.Tech CSE (Cybersecurity) – Ramdeobaba College of Engineering, Nagpur  
 ✉️ [write2abhishek4400@gmail.com](mailto:write2abhishek4400@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/abhishek-pandey1307) *(optional)*
+🔗 [LinkedIn](https://www.linkedin.com/in/abhishek-pandey1307) 
 
 ---
 
