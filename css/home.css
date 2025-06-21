@@ -1,0 +1,134 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #fff8f1;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #562C04;
+  margin-bottom: 15px;
+}
+
+.hero-text strong {
+  color: #B04B1A;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #562C04;
+  color: #fff;
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #4a2402;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.step-box {
+  max-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.step-box h3 {
+  color: #562C04;
+  margin-bottom: 10px;
+}
+
+.step-box p {
+  font-size: 15px;
+  color: #555;
+}
+
+.footer {
+  background-color: #562C04;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.hero {
+  background: url('hungry child.avif') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  color: #FFD9A0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.step-box {
+  max-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+}
+
+.step-box:hover {
+  transform: scale(1.05) translateZ(20px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}

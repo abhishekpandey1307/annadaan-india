@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Food | Annadaan</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/donor.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="module">
+    import { ngoNotifyEmailJS } from './config.js';
+    emailjs.init(ngoNotifyEmailJS.publicKey);
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="donor-signup.html">Donate</a>
+    <a href="ngo-signup.html">NGO Signup</a>
+    <a href="ngo-login.html">NGO Login</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<!-- Donation Form -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="heading">Donate Leftover Food</h2>
+    <form id="donationForm" class="form">
+      <label>Food Type:</label>
+      <input type="text" id="foodType" required placeholder="e.g. Rice, Roti, Sabji" />
+
+      <label>Quantity (approx):</label>
+      <input type="text" id="quantity" required placeholder="e.g. 20 plates" />
+
+      <label>Pickup Time:</label>
+      <input type="time" id="pickupTime" required />
+
+      <label>Address:</label>
+      <textarea id="address" required placeholder="Enter pickup address"></textarea>
+
+      <label>Donor Contact Number:</label>
+      <input type="tel" id="donorPhone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}" />
+
+      <label for="state">Select State:</label>
+      <select id="state" required>
+        <option value="">-- Select State --</option>
+      </select>
+
+      <label for="city">Select City:</label>
+      <select id="city" required>
+        <option value="">-- Select City --</option>
+      </select>
+
+      <label for="area">Village/Area:</label>
+      <select id="area" required>
+        <option value="">-- Select Area --</option>
+      </select>
+
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode" readonly placeholder="Auto-filled" />
+
+      <button type="submit" class="btn">Submit Donation</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Annadaan ❤️ — Made with the hunger to end hunger 🍽️</p>
+  </div>
+</footer>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- Config + Main Script -->
+<script type="module" src="js/donor.js"></script>
+<script type="module" src="config.js"></script>
+
+</body>
+</html>

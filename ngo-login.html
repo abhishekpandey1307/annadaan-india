@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO Login | Annadaan</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/ngo-login.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="donor-signup.html">Donate</a>
+      <a href="ngo-signup.html">NGO Signup</a>
+      <a href="ngo-login.html">NGO Login</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Login Form Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="heading">NGO Login</h2>
+      <form id="ngoLoginForm" class="form">
+        <label>Email:</label>
+        <input type="email" id="email" required placeholder="Enter your email" />
+
+        <label>Password:</label>
+        <input type="password" id="password" required placeholder="Enter your password" />
+
+        <button type="submit" class="btn">Login</button>
+        <p id="error" class="error-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Annadaan ❤️ — Made with the hunger to end hunger 🍽️</p>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+  <!-- Load Config + JS -->
+  <script type="module">
+    import { firebaseConfig } from './js/config.js';
+    import { initLogin } from './js/ngo-login.js';
+
+    firebase.initializeApp(firebaseConfig);
+    initLogin();
+  </script>
+</body>
+</html>

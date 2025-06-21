@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donor Dashboard | Annadaan</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/donor-dashboard.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="donor-dashboard.html" class="active">My Dashboard</a>
+      <a href="donor.html">Donate</a>
+      <a href="ngo-login.html">NGO Login</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Donor Info -->
+  <div class="profile-info">
+    <span id="donorEmail">Loading...</span>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Dashboard -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="heading">My Food Donations</h2>
+      <div id="donationsList" class="donations-list"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Annadaan — Made with the hunger to end hunger</p>
+    </div>                
+  </footer>
+
+  <!-- Firebase + EmailJS Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Config -->
+  <script src="js/config.js"></script>
+
+  <!-- Main Logic -->
+  <script src="js/donor-dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO Dashboard | Annadaan</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/ngo-dashboard.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="donor-signup.html">Donate</a>
+      <a href="ngo-signup.html">NGO Signup</a>
+      <a href="ngo-login.html">NGO Login</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Profile Info -->
+  <div class="profile-info">
+    <span id="ngoEmail">Loading...</span>
+    <button class="btn-logout" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Dashboard Content -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="heading">Food Donations Available</h2>
+      <div id="donationsList" class="donations-list">
+        <!-- Unclaimed donation cards will appear here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Claimed Donations History -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="heading">Your Claimed Donations</h2>
+      <div id="claimedList" class="donations-list">
+        <!-- Claimed donation cards will appear here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Annadaan ❤️ — Made with the hunger to end hunger 🍽️</p>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Load config and dashboard script -->
+  <script type="module">
+    import { firebaseConfig, donorNotifyEmailJS } from './js/config.js';
+    import { initializeDashboard } from './js/ngo-dashboard.js';
+
+    firebase.initializeApp(firebaseConfig);
+    emailjs.init(donorNotifyEmailJS.publicKey);
+    initializeDashboard();
+  </script>
+
+  <!-- Modal for Claim Confirmation -->
+  <div id="claimModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>🎉 Claim Successful!</h3>
+      <p><strong>Donor Contact:</strong> <span id="modalPhone"></span></p>
+      <p><strong>Pickup Address:</strong> <span id="modalAddress"></span></p>
+      <p><strong>Food:</strong> <span id="modalFood"></span></p>
+      <p class="thanks-msg">Please contact the donor and collect the food on time 🙏</p>
+    </div>
+  </div>
+
+</body>
+</html>

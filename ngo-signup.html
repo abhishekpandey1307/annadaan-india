@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO Signup | Annadaan</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/ngo_signup.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="donor-signup.html">Donate</a>
+      <a href="ngo-signup.html">NGO Signup</a>
+      <a href="ngo-login.html">NGO Login</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- NGO Signup Form -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="heading">NGO Signup</h2>
+      <form id="ngoSignupForm" class="form">
+        <label for="ngoName">NGO Name:</label>
+        <input type="text" id="ngoName" required placeholder="Enter NGO name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Enter NGO email" />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required placeholder="Enter contact number" />
+
+        <label for="state">State:</label>
+        <select id="state" required>
+          <option value="">-- Select State --</option>
+        </select>
+
+        <label for="city">City:</label>
+        <select id="city" required>
+          <option value="">-- Select City --</option>
+        </select>
+
+        <label for="area">Village/Area:</label>
+        <select id="area" required>
+          <option value="">-- Select Area --</option>
+        </select>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required placeholder="Set a password" />
+
+        <button type="submit" class="btn">Register NGO</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- JS File -->
+  <script src="js/ngo_signup.js"></script>
+</body>
+</html>

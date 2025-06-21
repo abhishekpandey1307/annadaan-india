@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Donor | Annadaan</title>
+  <link rel="stylesheet" href="css/donor-options.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo1.png" alt="Annadaan Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html">About Us</a>
+      <button onclick="logout()" class="btn-logout">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="heading">What would you like to do?</h2>
+      <div class="btn-group">
+        <a href="donor.html" class="btn">🍱 Post a Food Donation</a>
+        <a href="donor-dashboard.html" class="btn">📋 View My Donations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+  <!-- Local Script -->
+  <script type="module" src="donor-options.js"></script>
+</body>
+</html>

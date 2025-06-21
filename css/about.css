@@ -1,0 +1,123 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffef6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Banner */
+.about-hero {
+  background: #f5f0d7;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  color: #562C04;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  color: #6b3d0c;
+  font-size: 1.1rem;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  color: #562C04;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Our Values */
+.value-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.value-card {
+  background: #fff8f1;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-card h3 {
+  color: #B04B1A;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Join Us Buttons */
+.join {
+  text-align: center;
+}
+
+.join .btn {
+  display: inline-block;
+  background-color: #B04B1A;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 15px 10px;
+  transition: background 0.3s ease;
+}
+
+.join .btn:hover {
+  background-color: #8b370d;
+}
+
+/* Footer */
+.footer {
+  background-color: #562C04;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+}

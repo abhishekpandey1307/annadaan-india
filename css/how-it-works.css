@@ -1,0 +1,105 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffef6;
+}
+
+/* Intro Hero */
+.intro-hero {
+  background: #f8f0c5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.intro-hero h1 {
+  color: #562C04;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.intro-hero p {
+  font-size: 1.1rem;
+  color: #6b3d0c;
+}
+
+/* General Section Styling */
+.section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #562C04;
+  margin-bottom: 1.5rem;
+}
+
+/* Steps Cards Layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  background: #fff8f1;
+  border-radius: 12px;
+  padding: 30px 20px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.step {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #B04B1A;
+  color: #fff;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.card h3 {
+  color: #562C04;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+
+.donor-flow .card {
+  border-top: 4px solid #B04B1A;
+}
+
+.ngo-flow .card {
+  border-top: 4px solid #562C04;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .intro-hero h1 { font-size: 2rem; }
+  .card { padding: 25px 15px; }
+  .step { width: 32px; height: 32px; font-size: 1rem; top: -12px; left: 15px; }
+}
+
